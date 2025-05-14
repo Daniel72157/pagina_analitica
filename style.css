@@ -1,0 +1,177 @@
+/* Estilo general para el formulario */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+  }
+  
+  /* Contenedor principal */
+  h1 {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+  }
+  
+  /* Formulario */
+  form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para las etiquetas y campos de entrada */
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+  }
+  
+  /* Añadir espacio a los bordes */
+  form input[type="number"],
+  form select {
+    padding-left: 12px; /* Espacio izquierdo para evitar que el texto se pegue al borde */
+    padding-right: 12px; /* Espacio derecho */
+    padding-top: 8px; /* Espacio en la parte superior */
+    padding-bottom: 8px; /* Espacio en la parte inferior */
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Sección de resultados */
+  .results {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .results h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .results p {
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+  }
+  
+  #batchResult {
+    margin-top: 1em;
+    padding: 15px;
+    background-color: #e9f7ef;
+    border: 1px solid #d1f2d3;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  .confusion-matrix {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  .confusion-matrix th,
+  .confusion-matrix td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 1.1em;
+  }
+  
+  .confusion-matrix th {
+    color: white;
+  }
+  
+  .confusion-matrix td {
+    background-color: #f2f2f2;
+  }
+  
+  .confusion-matrix tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .confusion-matrix .tp {
+    background-color: #d4edda;
+  }
+  
+  .confusion-matrix .fp {
+    background-color: #f8d7da;
+  }
+  
+  .confusion-matrix .tn {
+    background-color: #d1ecf1;
+  }
+  
+  .confusion-matrix .fn {
+    background-color: #fff3cd;
+  }
+  #batchResult {
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  td {
+    font-size: 16px;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  strong {
+    font-size: 18px;
+    color: #333;
+  }
+  

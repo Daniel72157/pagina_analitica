@@ -8,7 +8,6 @@ import joblib
 import numpy as np
 from fcmpy import ExpertFcm, FcmSimulator
 
-PORT = 8080
 MODELS_PATH = Path("models")
 
 # Cargar modelos
@@ -123,6 +122,9 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
         return http.server.SimpleHTTPRequestHandler.do_GET(self)
 
 if __name__ == "__main__":
+    PORT = int(os.environ.get("PORT", 8080)) 
+
     print(f"Servidor iniciado en http://localhost:{PORT}")
-    with socketserver.TCPServer(("", PORT), MyHandler) as httpd:
+    with socketserver.TCPServer(("0.0.0.0", PORT), MyHandler) as httpd:
         httpd.serve_forever()
+

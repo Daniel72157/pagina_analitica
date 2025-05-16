@@ -118,12 +118,12 @@
       <input type="number" id="C30" name="C30" step="any" required>
 
       <label for="modelSelect">Selecciona el modelo de predicción</label>
-    <select id="modelSelect" name="modelSelect" required>
-        <option value="logistic">Regresión Logística</option>
-        <option value="svm">SVM</option>
-        <option value="neural_net">Red Neuronal</option>
-        <option value="fcm">Mapa Cognitivo Difuso</option>
-    </select>
+      <select id="modelSelect" name="modelSelect" required>
+          <option value="logistic">Regresión Logística</option>
+          <option value="svm">SVM</option>
+          <option value="neural_net">Red Neuronal</option>
+          <option value="fcm">Mapa Cognitivo Difuso</option>
+      </select>
 
       <button type="submit">Predecir</button>
     </form>
@@ -135,6 +135,13 @@
 
     <h1>Predicción por lote (Batch)</h1>
     <form id="batchForm" enctype="multipart/form-data">
+    <label for="modelSelectBatch">Selecciona modelo para lote:</label>
+    <select id="modelSelectBatch" name="modelSelectBatch">
+      <option value="logistic">Regresión Logística</option>
+      <option value="svm">SVM</option>
+      <option value="neural_net">Red Neuronal</option>
+      <option value="fcm">Mapa Cognitivo Difuso</option>
+    </select>
     <label for="csvFile">Sube un CSV de prueba:</label><br>
     <input type="file" name="csv" id="csvFile" accept=".csv" required><br><br>
 

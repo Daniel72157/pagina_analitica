@@ -31,8 +31,8 @@ document.getElementById("batchForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const fileInput = document.getElementById("csvFile");
-  const modelSelect = document.getElementById("modelSelect"); // ya existente
-  const selectedModel = modelSelect.value;
+  const modelSelectBatch = document.getElementById("modelSelectBatch");
+  const selectedModel = modelSelectBatch.value;
 
   if (!fileInput.files.length) {
     alert("Por favor selecciona un archivo CSV.");
@@ -49,7 +49,6 @@ document.getElementById("batchForm").addEventListener("submit", function (e) {
   })
     .then(res => res.json())
     .then(data => {
-      // Mostrar los resultados en una tabla HTML
       const batchResultContainer = document.getElementById("batchResult");
       batchResultContainer.innerHTML = `
         <strong>Exactitud:</strong> ${data.accuracy}%<br>
@@ -82,4 +81,5 @@ document.getElementById("batchForm").addEventListener("submit", function (e) {
       document.getElementById("batchResult").innerHTML = `<p style="color:red;">Error al procesar el archivo.</p>`;
     });
 });
+
 

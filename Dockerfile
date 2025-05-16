@@ -1,15 +1,20 @@
-# Usa una imagen base oficial con Python 3.9
-FROM python:3.9-slim
+# Usar una imagen base oficial de Python (versión estable)
+FROM python:3.11-slim
 
-# Establece el directorio de trabajo dentro del contenedor
+# Crear directorio de trabajo
 WORKDIR /app
 
-# Copia el archivo de requerimientos y lo instala
+# Copiar requerimientos (si tienes requirements.txt)
 COPY requirements.txt .
-RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# Copia todo tu proyecto al contenedor
+# Instalar dependencias
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copiar el código y modelos
 COPY . .
 
-# Comando para ejecutar tu script principal al arrancar
+# Exponer el puerto donde corre el servidor
+EXPOSE 8080
+
+# Comando para iniciar el servidor
 CMD ["python", "server.py"]

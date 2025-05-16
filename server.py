@@ -6,7 +6,6 @@ import os
 from pathlib import Path
 import joblib
 import numpy as np
-from fcmpy import ExpertFcm, FcmSimulator
 
 MODELS_PATH = Path("models")
 
